@@ -1,0 +1,36 @@
+############################################################
+# CORSIKA job-file generation
+#
+# The make_job_files.sh execution wrapper is taken/adapted
+# from the FAERIE simulation framework.
+#
+# Reference:
+# S. De Kockere et al.,
+# "Simulation of radio signals from cosmic-ray cascades in
+# air and ice as observed by in-ice Askaryan radio detectors,"
+# Phys. Rev. D 110, 023010 (2024).
+# DOI: 10.1103/PhysRevD.110.023010
+#
+# Modifications:
+# Paths and event parameters are supplied as HTCondor
+# variables for integration into the combined-signal
+# simulation workflow.
+############################################################
+
+# Path to make_job_files.sh
+executable = $(MAKE_JOB_FILES_SH)
+
+# HTCondor output files
+error  = $(ERROR_DIR)/make_job_files_$(LOG_NAME).err
+output = $(ERROR_DIR)/make_job_files_$(LOG_NAME).out
+log    = $(ERROR_DIR)/make_job_files_$(LOG_NAME).log
+
+getenv         = false
+universe       = vanilla
+notification   = never
+request_memory = 1000
+
+# Arguments expected by make_job_files.sh
+arguments = $(INPUT_FILE) $(OUTPUT_DIR) $(ZENITH) $(AZIMUTH) $(CORSIKA_LOG_FILE) $(LOG_NAME)
+
+queue

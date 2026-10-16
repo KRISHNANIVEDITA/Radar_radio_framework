@@ -1,0 +1,37 @@
+############################################################
+# CORSIKA HTCondor submission
+#
+# The run_corsika.sh execution wrapper is taken/adapted
+# from the FAERIE simulation framework.
+#
+# Reference:
+# S. De Kockere et al.,
+# "Simulation of radio signals from cosmic-ray cascades in
+# air and ice as observed by in-ice Askaryan radio detectors,"
+# Phys. Rev. D 110, 023010 (2024).
+# DOI: 10.1103/PhysRevD.110.023010
+#
+# Modifications:
+# Paths are supplied as HTCondor variables for integration
+# into the combined-signal simulation workflow.
+############################################################
+
+# Path to run_corsika.sh
+executable = $(RUN_CORSIKA_SH)
+
+# Condor output files
+error  = $(ERROR_DIR)/run_corsika_$(LOG_NAME).err
+output = $(ERROR_DIR)/run_corsika_$(LOG_NAME).out
+log    = $(ERROR_DIR)/run_corsika_$(LOG_NAME).log
+
+getenv         = false
+universe       = vanilla
+notification   = never
+request_memory = 8000
+
+# Arguments expected by run_corsika.sh
+arguments = $(INPUT_FILE) $(RUN_NR) $(ATMOS_FILE) $(REAS_FILE) $(LIST_FILE) $(OUTPUT_DIR)
+
+queue
+
+

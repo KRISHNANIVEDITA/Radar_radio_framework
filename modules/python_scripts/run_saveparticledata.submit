@@ -1,0 +1,28 @@
+# Should point to your make_job_files.sh executable:
+executable =  /user/knivedita/airtoice/python_scripts/run_saveparticledata.sh
+
+# Should point to the directory where you want to store the error files and the log files: 
+error	   =  /user/knivedita/airtoice/err/run_saveparticledata_$(LOG_NAME).err
+log	       =  /user/knivedita/airtoice/err/run_saveparticledata_$(LOG_NAME).log
+
+getenv         = false
+universe       = vanilla
+notification   = never
+request_memory = 1000MB
+
+request_cpus = 1
+#request_disk = 1GB
+#requirements = TARGET.OpSysAndVer == "CentOS7"
+
+########### Example submit command:
+# condor_submit run_saveparticledata.submit INPUT_FILE="/pnfs/iihe/radar/store/user/knivedita/RET/airshowers/G5e18.0z40a0/DAT000001" OUTPUT_DIR="/pnfs/iihe/radar/store/user/knivedita/RET/spd/G5e18.0z40a0/" ZENITH="40.0" AZIMUTH="0.0" LOG_NAME="read_G5e18z40"
+
+# to be specified:
+# INPUT_FILE = the path to the DAT file (of your Corsika sim) 
+# OUTPUT_DIR = the path to the directory you want to store the footprint output 
+# ZENITH     = the zenith angle of your Corsika sim (deg)
+# AZIMUTH    = the azimuth angle of your Corsika sim (deg)
+
+Arguments = $(INPUT_FILE) $(OUTPUT_DIR) $(ZENITH) $(AZIMUTH)
+queue
+

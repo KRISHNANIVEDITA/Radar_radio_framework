@@ -1,0 +1,23 @@
+'''
+#cp ${TMPDIR}/corsika_file ${output_dir}
+#cp ${TMPDIR}/corsikaread_input ${output_dir}
+#cp ${TMPDIR}/corsikaread_output ${output_dir}
+
+# Making the geant4 input file using the fort.8 file
+python /software/geant4/air_and_ice_comb/python_scripts/make_geant4_input_file_azimuth_rot.py ${TMPDIR}/fort.8 ${TMPDIR} 0 ${upper_radius} ${zenith} ${azimuth} ${corsika_log_file}
+rm ${TMPDIR}/fort.8
+#rm ${TMPDIR}/id_histo_file.root
+
+# Splitting the geant4 input file in energy
+mkdir ${TMPDIR}/energy_splitted/
+python /software/geant4/air_and_ice_comb/python_scripts/split_on_energy_geant4_input_file.py ${TMPDIR}/geant4_input_file.txt ${TMPDIR}/energy_splitted/
+rm ${TMPDIR}/geant4_input_file.txt
+
+# Splitting the files further down into job files
+mkdir ${TMPDIR}/jobs_input/
+python /software/geant4/air_and_ice_comb/python_scripts/split_in_job_files_geant4_input_file.py ${TMPDIR}/energy_splitted/ ${TMPDIR}/jobs_input/
+rm -r ${TMPDIR}/energy_splitted/
+
+cp -f ${TMPDIR}/jobs_input/* ${output_dir}
+rm -r ${TMPDIR}/jobs_input/
+'''
