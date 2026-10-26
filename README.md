@@ -26,25 +26,7 @@ Intended workflow
 6. Run MARES separately for the same event geometry.
 7. Combine and analyse the radio, Askaryan, and radar signals.
 The framework coordinates the files and metadata between these stages; it does not automatically run the complete chain as a single command.
-Repository structure
-Radar_radio_framework/
-├── setup.sh
-├── src/
-│   └── CORSIKA/
-│       ├── prepare.py
-│       ├── submit.py
-│       └── into_ice.py
-├── modules/
-│   ├── CORSIKA/
-│   │   ├── run_corsika.sh
-│   │   ├── run_corsika.submit
-│   │   ├── make_job_files.sh
-│   │   └── make_job_files.submit
-│   └── python_scripts/
-├── utilities/
-│   └── local/
-└── output_files/
-The structure may change while the software is under development.
+
 Basic setup
 Clone the repository and enter its main directory:
 git clone https://github.com/KRISHNANIVEDITA/Radar_radio_framework.git
