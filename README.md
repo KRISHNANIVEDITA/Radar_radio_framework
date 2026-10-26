@@ -1,7 +1,7 @@
 Radar–Radio Simulation Framework
-Work in progress: This repository is under active development. The full source code, installation instructions, and usage examples will be uploaded soon.
+Work in progress: This repository is under development. The full source code, installation instructions, and usage examples will be uploaded soon.
 
-This project provides a common workflow for simulating radio and radar signals from high-energy cosmic-ray events. It is designed to connect the different stages of the simulation while preserving a consistent event identity, geometry, and directory structure.
+This project provides a common workflow for simulating radio and radar signals from a high-energy cosmic-ray event. It is designed to connect the different stages of the simulation while preserving a consistent event identity, geometry, and directory structure.
 
 The framework brings together:
 - CORSIKA/CoREAS for air-shower development and in-air radio emission;
