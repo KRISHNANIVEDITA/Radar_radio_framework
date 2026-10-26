@@ -1,5 +1,5 @@
 Radar–Radio Simulation Framework
-Work in progress: This repository is under development. The full source code, installation instructions, and usage examples will be uploaded soon.
+> **Work in progress:** This repository is currently in progress. The full source code and documentation will be made publicly available soon.
 
 This project provides a common workflow for simulating radio and radar signals from a high-energy cosmic-ray event. It is designed to connect the different stages of the simulation.
 
