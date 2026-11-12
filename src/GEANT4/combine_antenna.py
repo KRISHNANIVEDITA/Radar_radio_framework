@@ -17,16 +17,7 @@ def submit_combine_antenna_traces(event, software_home=None):
     submit_file = module_dir / "run_combine_antenna_traces.submit"
     run_script = module_dir / "run_combine_antenna_traces.sh"
 
-    for required_file in (submit_file, run_script):
-        if not required_file.is_file():
-            raise FileNotFoundError(required_file)
-
-    if not os.access(run_script, os.X_OK):
-        raise PermissionError("not executable: {}".format(run_script))
-
     condor_submit = shutil.which("condor_submit")
-    if condor_submit is None:
-        raise FileNotFoundError("condor_submit was not found in PATH")
 
     output_root = Path(event.full_output_geant4_out)
     error_dir = software_home / "output_files" / "GEANT4" / "error_files"
