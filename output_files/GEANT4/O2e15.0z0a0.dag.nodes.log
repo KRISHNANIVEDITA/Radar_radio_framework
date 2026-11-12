@@ -1,0 +1,341 @@
+000 (4082739.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_0
+...
+000 (4082740.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_1
+...
+000 (4082741.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_2
+...
+000 (4082742.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_3
+...
+000 (4082743.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_4
+...
+000 (4082744.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_5
+...
+000 (4082745.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_6
+...
+000 (4082746.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_7
+...
+000 (4082747.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_8
+...
+000 (4082748.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_9
+...
+000 (4082749.000.000) 2026-11-04 01:05:08 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_1909_fe62>
+    DAG Node: job_10
+...
+001 (4082739.000.000) 2026-11-04 01:05:28 Job executing on host: <192.168.36.15:9618?addrs=192.168.36.15-9618+[2001-6a8-1080--c-3615]-9618&alias=node36-15.wn.iihe.ac.be&noUDP&sock=startd_2626_cbca>
+	SlotName: slot1_28@node36-15.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_3298878"
+	Cpus = 1
+	Disk = 4250
+	GPUs = 0
+	Memory = 8000
+...
+001 (4082742.000.000) 2026-11-04 01:05:29 Job executing on host: <192.168.34.7:9618?addrs=192.168.34.7-9618+[2001-6a8-1080--c-3407]-9618&alias=node34-7.wn.iihe.ac.be&noUDP&sock=startd_2924_3303>
+	SlotName: slot1_4@node34-7.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_1918596"
+	Cpus = 1
+	Disk = 4276
+	GPUs = 0
+	Memory = 8000
+...
+001 (4082741.000.000) 2026-11-04 01:05:29 Job executing on host: <192.168.34.10:9618?addrs=192.168.34.10-9618+[2001-6a8-1080--c-3410]-9618&alias=node34-10.wn.iihe.ac.be&noUDP&sock=startd_2951_b811>
+	SlotName: slot1_20@node34-10.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_2865945"
+	Cpus = 1
+	Disk = 4256
+	GPUs = 0
+	Memory = 8000
+...
+001 (4082743.000.000) 2026-11-04 01:05:29 Job executing on host: <192.168.34.6:9618?addrs=192.168.34.6-9618+[2001-6a8-1080--c-3406]-9618&alias=node34-6.wn.iihe.ac.be&noUDP&sock=startd_3025_7a13>
+	SlotName: slot1_4@node34-6.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_3880431"
+	Cpus = 1
+	Disk = 4250
+	GPUs = 0
+	Memory = 8000
+...
+001 (4082744.000.000) 2026-11-04 01:05:30 Job executing on host: <192.168.34.13:9618?addrs=192.168.34.13-9618+[2001-6a8-1080--c-3413]-9618&alias=node34-13.wn.iihe.ac.be&noUDP&sock=startd_2819_2d91>
+	SlotName: slot1_9@node34-13.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_2982499"
+	Cpus = 1
+	Disk = 4272
+	GPUs = 0
+	Memory = 8000
+...
+001 (4082746.000.000) 2026-11-04 01:05:30 Job executing on host: <192.168.36.12:9618?addrs=192.168.36.12-9618+[2001-6a8-1080--c-3612]-9618&alias=node36-12.wn.iihe.ac.be&noUDP&sock=startd_2667_eb2c>
+	SlotName: slot1_13@node36-12.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_2551798"
+	Cpus = 1
+	Disk = 4251
+	GPUs = 0
+	Memory = 8000
+...
+001 (4082745.000.000) 2026-11-04 01:05:30 Job executing on host: <192.168.34.3:9618?addrs=192.168.34.3-9618+[2001-6a8-1080--c-3403]-9618&alias=node34-3.wn.iihe.ac.be&noUDP&sock=startd_2950_0879>
+	SlotName: slot1_7@node34-3.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_3776134"
+	Cpus = 1
+	Disk = 4260
+	GPUs = 0
+	Memory = 8000
+...
+001 (4082747.000.000) 2026-11-04 01:05:31 Job executing on host: <192.168.37.8:9618?addrs=192.168.37.8-9618+[2001-6a8-1080--c-3708]-9618&alias=node37-8.wn.iihe.ac.be&noUDP&sock=startd_2981_4be9>
+	SlotName: slot1_7@node37-8.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_3537207"
+	Cpus = 1
+	Disk = 4234
+	GPUs = 0
+	Memory = 8000
+...
+001 (4082740.000.000) 2026-11-04 01:05:31 Job executing on host: <192.168.33.6:9618?addrs=192.168.33.6-9618+[2001-6a8-1080--c-3306]-9618&alias=node33-6.wn.iihe.ac.be&noUDP&sock=startd_2831_68b4>
+	SlotName: slot1_20@node33-6.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_2497721"
+	Cpus = 1
+	Disk = 4261
+	GPUs = 0
+	Memory = 8000
+...
+001 (4082749.000.000) 2026-11-04 01:05:31 Job executing on host: <192.168.33.10:9618?addrs=192.168.33.10-9618+[2001-6a8-1080--c-3310]-9618&alias=node33-10.wn.iihe.ac.be&noUDP&sock=startd_2908_397f>
+	SlotName: slot1_1@node33-10.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_74133"
+	Cpus = 1
+	Disk = 4235
+	GPUs = 0
+	Memory = 8000
+...
+001 (4082748.000.000) 2026-11-04 01:05:32 Job executing on host: <192.168.37.6:9618?addrs=192.168.37.6-9618+[2001-6a8-1080--c-3706]-9618&alias=node37-6.wn.iihe.ac.be&noUDP&sock=startd_2895_4ec4>
+	SlotName: slot1_23@node37-6.wn.iihe.ac.be
+	CondorScratchDir = "/scratch/condor/dir_3337526"
+	Cpus = 1
+	Disk = 4273
+	GPUs = 0
+	Memory = 8000
+...
+005 (4082748.000.000) 2026-11-04 01:05:44 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:01, Sys 0 00:00:01  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:01, Sys 0 00:00:01  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :        2        2      4273 
+	   GPUs                 :                           0 
+	   Memory (MB)          :        0     8000      8000 
+	   TimeExecute (s)      :       12                    
+	   TimeSlotBusy (s)     :       12                    
+
+	Job terminated of its own accord at 2026-11-04T00:05:44Z with exit-code 0.
+...
+005 (4082747.000.000) 2026-11-04 01:07:43 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:01:49, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:01:49, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :     2           2      4234 
+	   GPUs                 :                           0 
+	   Memory (MB)          :    14        8000      8000 
+	   TimeExecute (s)      :   132                       
+	   TimeSlotBusy (s)     :   132                       
+
+	Job terminated of its own accord at 2026-11-04T00:07:43Z with exit-code 0.
+...
+005 (4082749.000.000) 2026-11-04 01:08:42 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:02:44, Sys 0 00:00:07  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:02:44, Sys 0 00:00:07  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :        2        2      4235 
+	   GPUs                 :                           0 
+	   Memory (MB)          :       10     8000      8000 
+	   TimeExecute (s)      :      191                    
+	   TimeSlotBusy (s)     :      191                    
+
+	Job terminated of its own accord at 2026-11-04T00:08:42Z with exit-code 0.
+...
+005 (4082745.000.000) 2026-11-04 01:08:51 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:02:55, Sys 0 00:00:07  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:02:55, Sys 0 00:00:07  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :        2        2      4260 
+	   GPUs                 :                           0 
+	   Memory (MB)          :        9     8000      8000 
+	   TimeExecute (s)      :      201                    
+	   TimeSlotBusy (s)     :      201                    
+
+	Job terminated of its own accord at 2026-11-04T00:08:51Z with exit-code 0.
+...
+005 (4082746.000.000) 2026-11-04 01:09:26 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:03:37, Sys 0 00:00:07  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:03:37, Sys 0 00:00:07  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :     2           2      4251 
+	   GPUs                 :                           0 
+	   Memory (MB)          :    15        8000      8000 
+	   TimeExecute (s)      :   236                       
+	   TimeSlotBusy (s)     :   236                       
+
+	Job terminated of its own accord at 2026-11-04T00:09:26Z with exit-code 0.
+...
+005 (4082743.000.000) 2026-11-04 01:14:24 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:08:19, Sys 0 00:00:10  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:08:19, Sys 0 00:00:10  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :     2           2      4250 
+	   GPUs                 :                           0 
+	   Memory (MB)          :  4741        8000      8000 
+	   TimeExecute (s)      :   535                       
+	   TimeSlotBusy (s)     :   535                       
+
+	Job terminated of its own accord at 2026-11-04T00:14:24Z with exit-code 0.
+...
+005 (4082744.000.000) 2026-11-04 01:15:01 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:08:43, Sys 0 00:00:11  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:08:43, Sys 0 00:00:11  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.99        1         1 
+	   Disk (KB)            :     2           2      4272 
+	   GPUs                 :                           0 
+	   Memory (MB)          :  4738        8000      8000 
+	   TimeExecute (s)      :   571                       
+	   TimeSlotBusy (s)     :   571                       
+
+	Job terminated of its own accord at 2026-11-04T00:15:01Z with exit-code 0.
+...
+005 (4082742.000.000) 2026-11-04 01:22:51 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:16:55, Sys 0 00:00:11  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:16:55, Sys 0 00:00:11  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :     2           2      4276 
+	   GPUs                 :                           0 
+	   Memory (MB)          :  4755        8000      8000 
+	   TimeExecute (s)      :  1042                       
+	   TimeSlotBusy (s)     :  1042                       
+
+	Job terminated of its own accord at 2026-11-04T00:22:51Z with exit-code 0.
+...
+005 (4082739.000.000) 2026-11-04 01:23:53 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:18:04, Sys 0 00:00:06  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:18:04, Sys 0 00:00:06  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :     2           2      4250 
+	   GPUs                 :                           0 
+	   Memory (MB)          :  4757        8000      8000 
+	   TimeExecute (s)      :  1105                       
+	   TimeSlotBusy (s)     :  1105                       
+
+	Job terminated of its own accord at 2026-11-04T00:23:53Z with exit-code 0.
+...
+005 (4082741.000.000) 2026-11-04 01:36:30 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:30:28, Sys 0 00:00:17  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:30:28, Sys 0 00:00:17  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :     2           2      4256 
+	   GPUs                 :                           0 
+	   Memory (MB)          :  4773        8000      8000 
+	   TimeExecute (s)      :  1861                       
+	   TimeSlotBusy (s)     :  1861                       
+
+	Job terminated of its own accord at 2026-11-04T00:36:30Z with exit-code 0.
+...
+005 (4082740.000.000) 2026-11-04 01:49:06 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:42:37, Sys 0 00:00:20  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:42:37, Sys 0 00:00:20  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :     2           2      4261 
+	   GPUs                 :                           0 
+	   Memory (MB)          :  4770        8000      8000 
+	   TimeExecute (s)      :  2615                       
+	   TimeSlotBusy (s)     :  2615                       
+
+	Job terminated of its own accord at 2026-11-04T00:49:06Z with exit-code 0.
+...

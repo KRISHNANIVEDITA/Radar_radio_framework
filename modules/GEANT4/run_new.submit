@@ -1,0 +1,36 @@
+############################################################
+# CORSIKA HTCondor submission
+#
+# The run_new.submit execution wrapper is taken/adapted
+# from the FAERIE simulation framework.
+#
+# Reference:
+# S. De Kockere et al.,
+# "Simulation of radio signals from cosmic-ray cascades in
+# air and ice as observed by in-ice Askaryan radio detectors,"
+# Phys. Rev. D 110, 023010 (2024).
+# DOI: 10.1103/PhysRevD.110.023010
+#
+# Modifications:
+# Paths are supplied as HTCondor variables for integration
+# into the combined-signal simulation workflow.
+############################################################
+# Should point to your run_ice_shelf_project.sh executable
+# Should point to the directory where you want to store the error files,
+# which will contain possible error messages
+# GEANT4 HTCondor submit file
+
+universe = vanilla
+executable = $(RUN_NEW_SH)
+
+requirements = (TARGET.OpSysAndVer == "AlmaLinux9")
+
+getenv = false
+notification = never
+request_memory = 8000
+
+error = $(ERROR_DIR)/$(Cluster).$(Process).err
+
+arguments = $(INPUT_FILE) $(OUTPUT_FILE) $(RAND_INT) $(ZENITH_ANGLE) $(AZIMUTH_ANGLE) $(REAS_FILE) $(LIST_FILE) $(ATMOS_FILE)
+
+queue

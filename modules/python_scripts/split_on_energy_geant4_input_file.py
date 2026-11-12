@@ -1,3 +1,13 @@
+# The make_job_files.sh execution wrapper is taken/adapted
+# from the FAERIE simulation framework.
+#
+# Reference:
+# S. De Kockere et al.,
+# "Simulation of radio signals from cosmic-ray cascades in
+# air and ice as observed by in-ice Askaryan radio detectors,"
+# Phys. Rev. D 110, 023010 (2024).
+# DOI: 10.1103/PhysRevD.110.023010
+#
 # This script divides a geant4 input file into different files based on energy: the particles with an
 # energy between E_underlim and E_underlim*10 go in the first file, the particles with an energy between
 # E_underlim*10 and E_underlim*100 go in the second file, ..., the particles with an energy between 

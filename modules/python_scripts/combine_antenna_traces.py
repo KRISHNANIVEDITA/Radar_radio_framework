@@ -1,3 +1,13 @@
+# The make_job_files.sh execution wrapper is taken/adapted
+# from the FAERIE simulation framework.
+#
+# Reference:
+# S. De Kockere et al.,
+# "Simulation of radio signals from cosmic-ray cascades in
+# air and ice as observed by in-ice Askaryan radio detectors,"
+# Phys. Rev. D 110, 023010 (2024).
+# DOI: 10.1103/PhysRevD.110.023010
+#
 # This script combines the separate txt traces files created by the different cluster jobs into one txt traces file.
 # This version is made to work with the different antenna trace output files (direct, indirect, and SA radiation. 
 # It will make a combined file for each type of radiation, as well as a combined file combining the direct and indirect emission.

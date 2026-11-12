@@ -1,0 +1,14 @@
+Event: O2e15.0z0a0
+Temporary directory: /scratch/condor/dir_4118383
+Found the RUN HEADER block.
+Using the first observation level defined, which is at 320000.0 cm
+Found an EVENT HEADER block.
+Reading the data of event 1...
+Found an EVENT END block.
+Found the RUN END block.
+Read the Corsika fortran output file. Now creating the geant4 input file.
+ASSUMING CORSIKA USES t = 0 AT THE TOP OF THE ATMOSPHERE (I.E. TSTART WAS SET TO TRUE, WHICH IS BY DEFAULT IF YOU ARE USING CONEX, CURVED, SLANT, STACKIN, CERENKOV OR IACT)
+Finished making the Geant4 input file.
+Found the units. Energy is in GeV and length in cm.
+Geant4 job-input files created successfully.
+Output directory: /pnfs/iihe/radar/store/user/knivedita/RET/in_ice/job_in/O2e15.0z0a0/

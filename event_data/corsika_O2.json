@@ -1,0 +1,19 @@
+{
+    "event_id": "O2",
+    "zenith_angles": [
+        0
+    ],
+    "azimuth_angles": [
+        0
+    ],
+    "energy_gev": 1000000,
+    "seed": 100,
+    "corsika_output_root": "/ada_mnt/ada/user/knivedita/SOFTWARE/output_files/CORSIKA",
+    "in_ice_output_root": "/ada_mnt/ada/user/knivedita/SOFTWARE/output_files/GEANT4",
+    "radar_output_root": "/ada_mnt/ada/user/knivedita/SOFTWARE/output_files/RADAR",
+    "full_output_geant4_in": "/pnfs/iihe/radar/store/user/knivedita/RET/in_ice/job_in/",
+    "full_output_geant4_out": "/pnfs/iihe/radar/store/user/knivedita/RET/in_ice/job_out/",
+    "core_x_north_m": 10,
+    "core_y_west_m": 0,
+    "antenna_template": "/ada_mnt/ada/user/knivedita/SOFTWARE/utilities/local/example.list"
+}

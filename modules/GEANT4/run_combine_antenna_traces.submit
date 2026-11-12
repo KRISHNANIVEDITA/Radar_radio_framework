@@ -1,0 +1,19 @@
+############################################################
+# Combine CORSIKA/CoREAS antenna traces
+############################################################
+
+# Supplied by combine_antenna.py
+executable = $(RUN_COMBINE_SH)
+
+error  = $(ERROR_DIR)/combine_ant_$(LOG_NAME).err
+output = $(ERROR_DIR)/combine_ant_$(LOG_NAME).out
+log    = $(ERROR_DIR)/combine_ant_$(LOG_NAME).log
+
+getenv         = false
+universe       = vanilla
+notification   = never
+request_memory = 1000
+
+arguments = $(INPUT_DIR) $(OUTPUT_DIR)
+
+queue

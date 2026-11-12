@@ -1,75 +1,94 @@
-############################################################
-# CORSIKA HTCondor submission
-#
-# The run_corsika.sh execution wrapper is taken/adapted
-# from the FAERIE simulation framework.
-#
-# Reference:
-# S. De Kockere et al.,
-# "Simulation of radio signals from cosmic-ray cascades in
-# air and ice as observed by in-ice Askaryan radio detectors,"
-# Phys. Rev. D 110, 023010 (2024).
-# DOI: 10.1103/PhysRevD.110.023010
-#
-# Modifications:
-# Paths are supplied as HTCondor variables for integration
-# into the combined-signal simulation workflow.
-############################################################
 #!/bin/bash
-# The path to the corsikaread_thin (or corsikaread, in case of no thinning)  executable
-corsikaread_thin= $SOFTWARE_HOME/utilities/corsikaread_thin
 
-# The maximum radius of the footprint for which the particles will be read out, in cm
-# This is defined in the plane perpendicular to the shower axis frame,
-# i.e. the footprint will be an ellipse of 
-# width upper_radius/cos(zenith) and an height of upper_radius, aligned with the 
-# azimuth angle
+set -e
+
+# Arguments from make_job_files.submit
+input_file="$1"
+output_dir="$2"
+zenith="$3"
+azimuth="$4"
+corsika_log_file="$5"
+log_name="$6"
+
+# Find the main SOFTWARE directory
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SOFTWARE_HOME="${SOFTWARE_HOME:-$(cd "$script_dir/../.." && pwd)}"
+
+# Condor temporary directory
+tmp_dir="${_CONDOR_SCRATCH_DIR:-$TMPDIR}"
+
+echo "Event: $log_name"
+echo "Temporary directory: $tmp_dir"
+
+# Required programs
+corsikaread_thin="$SOFTWARE_HOME/utilities/corsikaread_thin"
+
+python_scripts="$SOFTWARE_HOME/modules/python_scripts"
+
+make_geant4_script="$python_scripts/make_geant4_input_file_azimuth_rot.py"
+split_energy_script="$python_scripts/split_on_energy_geant4_input_file.py"
+split_jobs_script="$python_scripts/split_in_job_files_geant4_input_file.py"
+
+# Maximum footprint radius in cm
 upper_radius=100
-'''
-#ROOTSYS="/cvmfs/icecube.opensciencegrid.org/py2-v2/RHEL_7_x86_64/i3ports/root-v5.34.18"
-#eval `/cvmfs/icecube.opensciencegrid.org/py2-v2/setup.sh`
-##Add any environment that need to be added 
-'''
-source /cvmfs/sft.cern.ch/lcg/views/setupViews.sh LCG_104 x86_64-el9-gcc13-opt
 
-input_file=${1}
-output_dir=${2}
-zenith=${3}
-azimuth=${4}
-corsika_log_file=${5}
-echo "Using TMPDIR: ${TMPDIR}"
-# Coppying the file
-cp ${input_file} ${TMPDIR}/corsika_file
+source /cvmfs/sft.cern.ch/lcg/views/setupViews.sh \
+    LCG_104 \
+    x86_64-el9-gcc13-opt
 
+mkdir -p "$output_dir"
 
-# Using corsikaread to read the file
-echo "${TMPDIR}/corsika_file                                                                      " > ${TMPDIR}/corsikaread_input
-cd ${TMPDIR}/
+# Copy the CORSIKA particle file
+cp "$input_file" "$tmp_dir/corsika_file"
 
-${corsikaread_thin} < ${TMPDIR}/corsikaread_input > ${TMPDIR}/corsikaread_output
-rm ${TMPDIR}/corsika_file
-rm ${TMPDIR}/corsikaread_input
-rm ${TMPDIR}/corsikaread_output
+# Run corsikaread_thin
+printf "%-80s\n" "$tmp_dir/corsika_file" \
+    > "$tmp_dir/corsikaread_input"
 
-#cp ${TMPDIR}/corsika_file ${output_dir}
-#cp ${TMPDIR}/corsikaread_input ${output_dir}
-#cp ${TMPDIR}/corsikaread_output ${output_dir}
+cd "$tmp_dir"
 
-# Making the geant4 input file using the fort.8 file
-python "$SOFTWARE_HOME/modules/python_scripts/make_geant4_input_file_azimuth_rot.py" 
-${TMPDIR}/fort.8 ${TMPDIR} 0 ${upper_radius} ${zenith} ${azimuth} ${corsika_log_file}
-rm ${TMPDIR}/fort.8
-#rm ${TMPDIR}/id_histo_file.root
+"$corsikaread_thin" \
+    < "$tmp_dir/corsikaread_input" \
+    > "$tmp_dir/corsikaread_output"
 
-# Splitting the geant4 input file in energy
-mkdir ${TMPDIR}/energy_splitted/
-python "$SOFTWARE_HOME/modules/python_scripts/split_on_energy_geant4_input_file.py" ${TMPDIR}/geant4_input_file.txt ${TMPDIR}/energy_splitted/
-rm ${TMPDIR}/geant4_input_file.txt
+rm -f "$tmp_dir/corsika_file"
+rm -f "$tmp_dir/corsikaread_input"
+rm -f "$tmp_dir/corsikaread_output"
 
-# Splitting the files further down into job files
-mkdir ${TMPDIR}/jobs_input/
-python "$SOFTWARE_HOME/modules/python_scripts/split_in_job_files_geant4_input_file.py"  ${TMPDIR}/energy_splitted/ ${TMPDIR}/jobs_input/
-rm -r ${TMPDIR}/energy_splitted/
+# Create the Geant4 input file
+python3 "$make_geant4_script" \
+    "$tmp_dir/fort.8" \
+    "$tmp_dir" \
+    0 \
+    "$upper_radius" \
+    "$zenith" \
+    "$azimuth" \
+    "$corsika_log_file"
 
-cp -f ${TMPDIR}/jobs_input/* ${output_dir}
-rm -r ${TMPDIR}/jobs_input/
+rm -f "$tmp_dir/fort.8"
+
+# Split by energy
+mkdir -p "$tmp_dir/energy_splitted/"
+
+python3 "$split_energy_script" \
+    "$tmp_dir/geant4_input_file.txt" \
+    "$tmp_dir/energy_splitted/"
+
+rm -f "$tmp_dir/geant4_input_file.txt"
+
+# Create the individual Geant4 job-input files
+mkdir -p "$tmp_dir/jobs_input/"
+
+python3 "$split_jobs_script" \
+    "$tmp_dir/energy_splitted/" \
+    "$tmp_dir/jobs_input/"
+
+rm -rf "$tmp_dir/energy_splitted/"
+
+# Copy results
+cp -f "$tmp_dir/jobs_input/"* "$output_dir/"
+
+rm -rf "$tmp_dir/jobs_input/"
+
+echo "Geant4 job-input files created successfully."
+echo "Output directory: $output_dir"

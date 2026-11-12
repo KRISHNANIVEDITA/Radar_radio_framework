@@ -1,3 +1,13 @@
+# The make_job_files.sh execution wrapper is taken/adapted
+# from the FAERIE simulation framework.
+#
+# Reference:
+# S. De Kockere et al.,
+# "Simulation of radio signals from cosmic-ray cascades in
+# air and ice as observed by in-ice Askaryan radio detectors,"
+# Phys. Rev. D 110, 023010 (2024).
+# DOI: 10.1103/PhysRevD.110.023010
+#
 # This script reads a corsika output file and makes an input file for the geant4 application.
 # This version uses the same t = 0 point as CoREAS, using the time of entry in the atmosphere stated in
 # the Corsika output log.
